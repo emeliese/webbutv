@@ -1,16 +1,16 @@
 var Emelie = {favFood: "pizza",favMovie: "Deathproof"}; 
-var person = showObject();
+var person = showObject(Emelie);
 
-function showObject(Emelie) {
-  var result = 0;
-    for (var p in Emelie) {
-    if(Emelie.hasOwnProperty(p) ) {
-        result++ /*+= p + " , " + Emelie[p] + "\n";*/
+function showObject(obj) {
+  var result = "";
+    for (var p in obj) {
+    if(obj.hasOwnProperty(p) ) {
+        result += p + " , " + obj[p] + "\n";
     } 
   }            
   return result;
 }
-console.log("Something" + person);
+console.log(person);
 
 // function Iterator(o){
 //     Emelie.keys(o).forEach(function(key) {
